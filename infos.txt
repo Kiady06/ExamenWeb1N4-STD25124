@@ -1,0 +1,13 @@
+> email : toky@mail.hei.school
+objet : EXAMEN WEB1 N4 - STD25124
+format accepte :
+- dossier google drive
+- piece jointe RAR/ZIP
+- repo git accessible (publique)
+- responsive
+
+1920*1080
+
+mobile : google pixel 7
+
+deadline : 27 Avril 2026 avant minuit

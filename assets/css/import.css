@@ -1,0 +1,83 @@
+/* =======================
+   FONTS
+======================= */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+
+/* =======================
+   VARIABLES
+======================= */
+:root {
+  --hei-blue: #001a3d;
+  --hei-yellow: #ddaa00;
+  --hei-light-gray: #e6e6e5;
+  --hei-text: #333;
+  --hei-text-white: #e6e6e5;
+  --hei-hover-yellow: #c49600;
+
+  --main-font: "Poppins", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+}
+
+/* =======================
+   RESET
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =======================
+   BASE
+======================= */
+body {
+  font-family: var(--body-font);
+  color: var(--hei-text);
+}
+
+/* =======================
+   TYPOGRAPHY
+======================= */
+h1, h2, h3 {
+  font-family: var(--main-font);
+  color: var(--hei-blue);
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: 600;
+  color: white;
+}
+
+p.black {
+  color: var(--hei-text);
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn-outline {
+  display: inline-block;
+  padding: 12px 35px;
+  border: 2px solid var(--hei-yellow);
+  color: var(--hei-yellow);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: var(--hei-yellow);
+  color: white;
+}

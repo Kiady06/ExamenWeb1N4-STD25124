@@ -1,0 +1,979 @@
+/* =======================
+   HEADER
+======================= */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  height: 5rem;
+  background-color: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo-link {
+  display: block;
+  height: 100%;
+}
+
+.logo-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation */
+header nav {
+  padding-block: 0.5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--hei-blue);
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: var(--hei-yellow);
+}
+
+.intranet {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: var(--hei-yellow);
+  color: var(--hei-blue) !important;
+  transition: all 0.2s ease;
+}
+
+.intranet:hover {
+  transform: translateY(-3px);
+  background-color: var(--hei-hover-yellow);
+  box-shadow: 0 4px 15px rgba(221, 170, 0, 0.3);
+}
+
+/* =======================
+   HERO SECTION
+======================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../img/background.png") center / cover no-repeat;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+/* ── Student photos ── */
+.student-left,
+.student-right {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.student-left  { left: 0; }
+.student-right { right: 0; }
+
+/* ── Center content ── */
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+  height: 100%;
+  padding-bottom: 4rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text-wrapper {
+  max-width: 40ch;
+  margin-bottom: 0;
+}
+
+.hero-text {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions a {
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-actions a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info {
+  background-color: white;
+  color: var(--hei-blue);
+  border: 2px solid white;
+}
+
+.btn-schedule {
+  background-color: var(--hei-yellow);
+  color: var(--hei-blue);
+}
+
+/* Badge */
+.hero-badge {
+  color: white;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* ── Scroll arrow ── */
+.scroll-arrow {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--hei-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+  transition: background 0.2s;
+}
+
+.scroll-arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+
+/* ── About us ── */
+.about {
+  background: url("../img/apropos-backgound.png") center / cover no-repeat;
+  max-width: 100vw;
+}
+
+.about-container {
+  position: relative;
+  max-width: 100vw;
+}
+
+.about h2 {
+  padding-bottom: 100px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-container {
+  padding: 80px 5%;
+  display: flex;
+  gap: 20vh;
+}
+
+.icon-box {
+  color: var(--hei-yellow);
+  display: flex;
+  gap: 20px;
+  align-items:center ;
+  padding-bottom: 10px;
+}
+
+.icon-box i {
+  font-size: 3.5rem;
+}
+
+.deco {
+  position: absolute;
+  right: 0;
+  width: 25vh;
+}
+
+/* ── Pedagogy ── */
+
+.pedagogy {
+  width: 100vw;
+  max-width: 100vw;
+  padding: 100px 10%;
+  background: url("../img/Fond-HEI-2-v2\ 1.png") center / cover no-repeat; 
+  text-align: center;
+  position: relative;
+}
+
+.pedagogy-header {
+  margin-bottom: 80px; 
+}
+
+.pedagogy-header h2 {
+  color: var(--hei-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pedagogy-header p {
+  max-width: 70ch;
+  margin-inline: auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+.pedagogy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 300px)); 
+  gap: 3rem;
+  margin-top: 8rem; 
+  justify-content: center;
+}
+
+.team-card {
+  position: relative;
+  background-color: var(--hei-blue);
+  border-radius: 15px;
+  padding: 175px 20px 40px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.team-card h3 {
+  color: white;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-wrapper {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--hei-yellow);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-content .role {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  font-weight: 300;
+  max-inline-size: 20ch;
+  text-align: center;
+  margin-inline: auto;
+  font-weight: 300;
+}
+
+.nav-arrows {
+    position: absolute;
+    top: 60%; /* Aligne les flèches avec le centre des cartes */
+    left: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+.nav-arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #ddd; 
+    background-color: white;
+    color: var(--hei-blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-arrows button:hover {
+    background-color: var(--hei-blue);
+    color: white;
+    border-color: var(--hei-blue);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-arrows button i {
+    pointer-events: none;
+}
+
+/* --- Opportunities Section --- */
+.opportunities {
+  background-color: #fff;
+  overflow: hidden;
+  padding-block: 5vh;
+  position: relative;
+}
+
+.opportunities-container {
+  display: flex;
+  max-width: 100vw;
+}
+
+/* Images gauche et droite */
+.left-img,
+.right-img {
+  width: 25vw;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.left-img img,
+.right-img img {
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+}
+
+/* Contenu central */
+.opportunities-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 50px;
+  background-color: #f6f7fb;
+  position: relative;
+}
+
+/* Titre jaune/doré */
+.opportunities-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color:  var(--hei-yellow);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.opportunities-intro p {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.opportunities-list {
+  margin-top: 20px;
+}
+
+.opportunities-list p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.7;
+}
+
+.opportunities-text {
+  padding: 20px;
+}
+
+.decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Icône </> — à droite, vers le haut */
+.deco-chevron {
+  right: 0;
+  top: 40%;
+  width: 4vw;
+}
+
+/* Icône moniteur — en bas à gauche du contenu */
+.deco-pc {
+  bottom: 8%;
+  left: 0;
+  width: 10vw;
+}
+
+/* Points décoratifs — en bas à droite */
+.deco-opp {
+  bottom: 5%;
+  left: 50%;
+  transform: translateY(75%) rotate(80deg);
+  width: 10vw;
+}
+
+/* --- Section Domaines --- */
+.domains {
+  padding: 100px 10%;
+  background-color: var(--hei-light-gray);
+  text-align: center;
+}
+
+.domains-header h2 {
+  color: var(--hei-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.domains-header p {
+  max-width: 60ch;
+  margin-inline: auto;
+  color: var(--hei-text);
+  margin-bottom: 80px;
+}
+
+/* --- Grid --- */
+.domains-grid {
+  display: grid;
+ grid-template-columns: repeat(3, minmax(250px, 350px));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* --- Style de base des Cards --- */
+.domain-card {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  padding: 80px 25px 40px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper img {
+  width: 60%;
+  object-fit: contain;
+}
+
+.domain-content h3 {
+  color: var(--hei-blue);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.domain-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch; 
+  margin-inline: auto;
+  color: var(--hei-text);
+}
+
+.domain-content h3 {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* --- CARD SPÉCIALE (Milieu) --- */
+.special-card {
+  border: 2px dashed var(--hei-blue); 
+  transform: translateY(-20px);
+}
+
+.special-card:hover {
+  transform: translateY(0px);
+}
+
+.admission {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.admission h2 {
+  color: var(--hei-blue);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.admission-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* --- Style des Étapes --- */
+.admission-step {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--hei-blue);
+}
+
+/* Couleurs dégradées (du plus clair au plus foncé) */
+.step-01 { background-color: #fddeb4 }
+.step-02 { background-color: #f8ce90; }
+.step-03 { background-color: #f2bf6c; }
+
+.step-number {
+  font-size: 5rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.admission-step h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.admission-step p {
+  font-size: 0.95rem;
+  max-width: 25ch;
+  line-height: 1.4;
+  color: var(--hei-text);
+}
+
+/* --- Séparateurs (Flèches) --- */
+.step-separator {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  width: 0; 
+  z-index: 5;
+}
+
+/* On utilise l'icône FontAwesome pour la flèche blanche */
+.step-separator i {
+  color: white;
+  font-size: 2rem;
+  transform: translateX(-50%); /* Centre la flèche sur la jointure */
+}
+
+/* --- Bouton du bas --- */
+.admission-action {
+  margin-top: 40px;
+}
+
+.pedagogical-program {
+  background: linear-gradient(to bottom, #d8dbdc 0%,#eaebec 50%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.program-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 5%;
+}
+
+.program-content {
+  flex: 1;
+  text-align: center;
+}
+
+.program-content h2 {
+  color: var(--hei-blue);
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.program-content p {
+  color: var(--hei-blue);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto 3rem;
+}
+
+.program-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.program-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+ /*-------------- Technologia ------------------------*/
+.technologies {
+  padding: 100px 10%;
+  background: url("../img/Fond-HEI-3\ 1.png") center / cover no-repeat;
+}
+
+.technos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* --- Grille de gauche (3 colonnes) --- */
+.technos-grid {
+  flex: 0 0 50%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 2rem 1rem;
+  align-items: center;
+}
+
+.logo-circle:nth-child(1),
+.logo-circle:nth-child(2),
+.logo-circle:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Les 2 logos du bas (C, TS) */
+/* On décale le premier pour qu'il commence à la 2ème colonne */
+.logo-circle:nth-child(4) {
+  grid-column: 2 / span 2; 
+}
+
+/* Le suivant se place naturellement à côté */
+.logo-circle:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.logo-circle {
+  background-color: white;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20%; /* Espace entre le logo et le bord du cercle */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 5px solid var(--hei-yellow);
+  transition: transform 0.3s ease;
+}
+
+.logo-circle:hover {
+  transform: scale(1.1);
+}
+
+.logo-circle img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Contenu de droite --- */
+.technos-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.technos-content h2 {
+  color: var(--hei-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.technos-content p {
+  color: var(--hei-blue);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 55ch; /* légèrement plus large */
+}
+
+/* --- Section Partenaires --- */
+.partners {
+  width: 100%;
+  padding-bottom: 80px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Bandeau décoratif du haut */
+.partners-decoration {
+  margin-bottom: 40px;
+}
+
+.partners-container h2 {
+  color: var(--hei-blue);
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+/* --- Grille des Logos --- */
+.partners-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.partners-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.partners-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.partners-row:last-child {
+  margin-left: 5%;
+}
+
+.partner-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 80px; 
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/*------------- footer -----------------------*/
+.main-footer {
+  background-color: var(--hei-blue);
+  color: white;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Colonnes */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-col h4 {
+  color: var(--hei-yellow);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+/* Logo col */
+.footer-logo {
+  width: 10rem;
+  margin-bottom: 1.5rem;
+  align-self: center;
+}
+
+.logo-col p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+/* Listes */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-col ul li {
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-col a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: var(--hei-yellow);
+}
+
+/* Icônes sociales */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  width: 55px;
+  height: 55px;
+  background-color: var(--hei-yellow);
+  color: var(--hei-blue) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+
+/* Bouton scroll top */
+.scroll-top {
+  position: absolute;
+  right: 5%;
+  bottom: 80px;
+  width: 55px;
+  height: 55px;
+  background-color: var(--hei-yellow);
+  color: var(--hei-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Copyright */
+.footer-bottom {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: var(--hei-blue);
+  text-align: center;
+  padding: 16px 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--hei-blue);
+}

@@ -1,0 +1,3 @@
+info.txt
+/*.png
+!/assets/**/*.png
