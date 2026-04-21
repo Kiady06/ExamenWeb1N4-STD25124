@@ -645,7 +645,7 @@ header nav {
   display: flex;
   align-items: center;
   background-color: transparent;
-  position: relative;
+  /* position: relative; */
   width: 0; 
   z-index: 5;
 }
@@ -653,8 +653,9 @@ header nav {
 /* On utilise l'icône FontAwesome pour la flèche blanche */
 .step-separator i {
   color: white;
-  font-size: 2rem;
-  transform: translateX(-50%); /* Centre la flèche sur la jointure */
+  font-size: 4rem;
+  transform: translateX(-200%) translateY(80%); 
+
 }
 
 /* --- Bouton du bas --- */

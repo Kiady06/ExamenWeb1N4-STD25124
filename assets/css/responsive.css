@@ -253,6 +253,7 @@
   }
 
   .step-separator i {
+    font-size: 2rem;
     transform: rotate(90deg) translateX(-50%);
   }
 
