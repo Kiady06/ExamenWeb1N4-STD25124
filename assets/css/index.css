@@ -428,12 +428,28 @@ header nav {
   position: relative;
 }
 
+.white-band {
+  background-color: white;
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  right: 35vw; 
+  z-index: 0;
+}
+
 .opportunities-intro p {
   font-size: 0.95rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 8px;
   line-height: 1.6;
+}
+
+.opportunities-content h2,
+.opportunities-intro,
+.opportunities-list {
+  position: relative;
+  z-index: 1;
 }
 
 .opportunities-list {
@@ -445,6 +461,7 @@ header nav {
   font-weight: 600;
   color: #222;
   line-height: 1.7;
+  z-index: 1;
 }
 
 .opportunities-text {
@@ -557,7 +574,7 @@ header nav {
   margin-bottom: 15px;
 }
 
-/* --- CARD SPÉCIALE (Milieu) --- */
+/* --- (Milieu) --- */
 .special-card {
   border: 2px dashed var(--hei-blue); 
   transform: translateY(-20px);

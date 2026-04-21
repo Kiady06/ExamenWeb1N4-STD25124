@@ -77,7 +77,6 @@
     padding: 0.75rem 5%;
   }
 
-  /* Show hamburger zone, hide desktop nav */
   .header-right {
     display: flex;
   }
@@ -203,6 +202,10 @@
   .opportunities-container {
     flex-direction: column;
   }
+
+.opportunities-container .white-band {
+  display: none;
+}
 
   .opportunities-content {
     padding: 40px 5%;

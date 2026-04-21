@@ -1,3 +1,4 @@
+.vscode/
 info.txt
 /*.png
 !/assets/**/*.png
